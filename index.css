@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: ; */
+}
+li {
+    list-style: none;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    height: 50px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+     white-space: nowrap;
+}
