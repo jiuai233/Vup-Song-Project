@@ -20,6 +20,8 @@
     <div class="Song-List">
       <song-list
           :objdata="objdata"
+          :out_side_color="'1'"
+          :in_side_color="'1'"
       ></song-list>
     </div>
   </div>
@@ -60,8 +62,7 @@ export default {
         }
       }
       this.objdata.linshi_type.unshift('全部歌曲') //推一个全部歌曲在类型列表里，要不然导航栏里不显示
-      this.objdata.type_list = new Set(this.linshi_type); //直接对临时_type去重，赋值给type_list
-
+      this.objdata.type_list = new Set(this.objdata.linshi_type); //直接对临时_type去重，赋值给type_list
       //下面是显示歌单用作的遍历
       for(let item in this.objdata.songlist_json){
         this.objdata.song_list_index.push(this.objdata.songlist_json[item]['歌曲'])  //显示歌单歌曲的遍历

@@ -1,15 +1,21 @@
 <template>
   <div class="Song-list">
     <div class="Song-list-main">
-      <div class="Song-list-main-body">
+      <div class="Song-list-main-body" :class="[
+          out_side_color?'out-side-color--'+out_side_color:'',
+      ]">
         <ul class="Song-list-main-header-ul">
-          <li v-for="item in this.objdata. type_list" :key="item" @click="show_item(item)">
-            <el-button  round>
+          <li v-for="item in this.objdata.type_list" :key="item" @click="show_item(item)">
+            <el-button   round>
               {{item}}
             </el-button>
           </li>
         </ul>
-        <div class="main-body-main-title">
+        <div class="main-body-main-title"
+             :class="[
+                  in_side_color?'in-side-color--'+in_side_color:''
+             ]"
+        >
           <div class="main-body-main-title-song">
             <h2>歌曲</h2>
           </div>
@@ -75,6 +81,14 @@ export default {
   props:{
     objdata:{
       type:Object
+    },
+    out_side_color:{
+      type:String,
+      default:''
+  },
+    in_side_color:{
+      type:String,
+      default: ''
     }
   },
   methods:{

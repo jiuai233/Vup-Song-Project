@@ -14,3 +14,9 @@ li {
     text-overflow:ellipsis;
      white-space: nowrap;
 }
+.out-side-color--1 {
+    background: rgb(203, 230, 253) !important;
+}
+.in-side-color--1 {
+    background: rgb(153, 205, 252) !important;
+}
